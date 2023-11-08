@@ -16,6 +16,10 @@ export default {
         lightGray: 'hsl(229, 24%, 87%)',
         magnolia: 'hsl(217, 100%, 97%)',
         alabaster: 'hsl(231, 100%, 99%)',
+      },
+      backgroundImage: {
+        'sidebarDesktop': "url('./assets/images/bg-sidebar-desktop.svg')",
+        'sidebarMobile': "url('./assets/images/bg-sidebar-mobile.svg')",
       }
     },
   },
