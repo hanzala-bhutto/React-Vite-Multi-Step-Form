@@ -1,7 +1,8 @@
 // import { useState } from 'react';
 import './App.css'
 import CurrentStep from './components/CurrentStep'
-import InfoForm from './components/InfoForm'
+// import InfoForm from './components/InfoForm'
+import PlanForm from './components/PlanForm'
 
 function App() {
 
@@ -12,7 +13,8 @@ function App() {
           <CurrentStep />
         </article>
         <article className='flex flex-col justify-between p-9 pb-4 text-marineBlue'>
-          <InfoForm />
+          {/* <InfoForm /> */}
+          <PlanForm />
           <div className='flex flex-row justify-between'>
             {/* <button className='text-coolGray capitalize'>go back</button> */}
             <button className=' ml-auto p-2 px-6 rounded-lg bg-marineBlue text-white '>Next Step</button>
