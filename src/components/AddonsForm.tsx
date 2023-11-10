@@ -6,7 +6,7 @@ const AddonsForm = () => {
                 <h1 className="text-3xl font-bold">Pick add-ons</h1>
                 <p className="text-coolGray">Add-ons help enhance your gaming experience</p>
             </div>
-            <form className="flex flex-col gap-4 mb-8 w-[440px]">
+            <form className="flex flex-col gap-4 mb-8">
                 <div>
                     <input id="arcade" type="checkbox" name="plan" value="online" className="sr-only peer"/>
                     <label htmlFor="arcade" className="flex flex-row items-center justify-start gap-6 p-4 border-2 rounded-lg peer-checked:border-2 peer-checked:border-purpleBlue group">

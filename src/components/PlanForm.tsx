@@ -6,10 +6,10 @@ const PlanForm = () => {
                 <h1 className="text-3xl font-bold">Select your plan</h1>
                 <p className="text-coolGray">You have the option of monthly or yearly billing</p>
             </div>
-            <form className="flex flex-row gap-4 mb-8">
+            <form className="flex flex-row justify-between gap-4 mb-8">
                 <div>
                 <input id="arcade" type="radio" name="plan" value="arcade" className="hidden peer" defaultChecked/>
-                <label htmlFor="arcade" className="flex flex-col justify-between p-3 h-44 w-40 border-2 rounded-lg peer-checked:border-2 peer-checked:border-purpleBlue ">
+                <label htmlFor="arcade" className="flex flex-col justify-between p-3 h-44 w-[140px] border-2 rounded-lg peer-checked:border-2 peer-checked:border-purpleBlue ">
                     <img className="w-10" alt="" src="./assets/images/icon-arcade.svg" />
                     <div className="peer-checked:border-2">
                         <h2 className="font-bold text-lg ">Arcade</h2>
@@ -20,7 +20,7 @@ const PlanForm = () => {
 
                 <div>
                     <input type="radio" name="plan" id="advanced" value="advanced" className="hidden peer"/>
-                    <label htmlFor="advanced" className="flex flex-col justify-between p-3 h-44 w-40 border-2 rounded-lg peer-checked:border-2 peer-checked:border-purpleBlue">
+                    <label htmlFor="advanced" className="flex flex-col justify-between p-3 h-44 w-[140px] border-2 rounded-lg peer-checked:border-2 peer-checked:border-purpleBlue">
                         <img className="w-10" alt="" src="./assets/images/icon-advanced.svg" />
                         <div className="peer-checked:border-2">
                             <h2 className="font-bold text-lg ">Advanced</h2>
@@ -31,7 +31,7 @@ const PlanForm = () => {
 
                 <div>
                 <input type="radio" name="plan" id="pro" value="pro" className="hidden peer"/>
-                <label htmlFor="pro" className="flex flex-col justify-between p-3 h-44 w-40 border-2 rounded-lg peer-checked:border-2 peer-checked:border-purpleBlue">
+                <label htmlFor="pro" className="flex flex-col justify-between p-3 h-44 w-[140px] border-2 rounded-lg peer-checked:border-2 peer-checked:border-purpleBlue">
                     <img className="w-10" alt="" src="./assets/images/icon-pro.svg" />
                     <div className="">
                         <h2 className="font-bold text-lg ">Pro</h2>

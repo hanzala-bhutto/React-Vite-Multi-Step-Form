@@ -6,7 +6,7 @@ const Summary = () => {
                 <h1 className="text-3xl font-bold">Finishing up</h1>
                 <p className="text-coolGray">Double check everything looks OK before confirming.</p>
             </div>
-            <div className="flex flex-col gap-4 p-6 w-[440px] bg-magnolia rounded-lg">
+            <div className="flex flex-col gap-4 p-6 bg-magnolia rounded-lg">
                 <div className="flex flex-row items-center justify-between">
                     <div className="">
                         <h2 className="font-bold text-lg ">Arcade (Monthly)</h2>
