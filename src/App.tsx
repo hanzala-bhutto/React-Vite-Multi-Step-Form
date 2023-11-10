@@ -1,7 +1,8 @@
 // import { useState } from 'react';
 import './App.css'
-import AddonsForm from './components/AddonsForm'
+// import AddonsForm from './components/AddonsForm'
 import CurrentStep from './components/CurrentStep'
+import Summary from './components/Summary'
 // import InfoForm from './components/InfoForm'
 // import PlanForm from './components/PlanForm'
 
@@ -16,7 +17,8 @@ function App() {
         <article className='flex flex-col justify-between p-9 pb-4 text-marineBlue'>
           {/* <InfoForm /> */}
           {/* <PlanForm /> */}
-          <AddonsForm />
+          {/* <AddonsForm /> */}
+          <Summary />
           <div className='flex flex-row justify-between'>
             {/* <button className='text-coolGray capitalize'>go back</button> */}
             <button className=' ml-auto p-2 px-6 rounded-lg bg-marineBlue text-white '>Next Step</button>
