@@ -2,14 +2,14 @@
 const AddonsForm = () => {
     return (
         <div>
-            <div className="mb-8">
+            <div className="mb-4 lg:mb-8">
                 <h1 className="text-3xl font-bold">Pick add-ons</h1>
                 <p className="text-coolGray">Add-ons help enhance your gaming experience</p>
             </div>
-            <form className="flex flex-col gap-4 mb-8">
+            <form className="flex flex-col gap-4 mb-4 lg:mb-8">
                 <div>
                     <input id="arcade" type="checkbox" name="plan" value="online" className="sr-only peer"/>
-                    <label htmlFor="arcade" className="flex flex-row items-center justify-start gap-6 p-4 border-2 rounded-lg peer-checked:border-2 peer-checked:border-purpleBlue group">
+                    <label htmlFor="arcade" className="flex flex-row items-center justify-start gap-3 lg:gap-6 p-4 border-2 rounded-lg peer-checked:border-2 peer-checked:border-purpleBlue group">
                         <div>
                             <img className="py-1 px-[3px] border-lightGray border-2 rounded-md peer-checked:group-[]:bg-purpleBlue" alt="" src="./assets/images/icon-checkmark.svg" />
                         </div>
@@ -24,7 +24,7 @@ const AddonsForm = () => {
 
                 <div>
                     <input type="checkbox" name="plan" id="advanced" value="larger" className="sr-only peer"/>
-                    <label htmlFor="advanced" className="flex flex-row items-center justify-start gap-6 p-4 border-2 rounded-lg peer-checked:border-2 peer-checked:border-purpleBlue group">
+                    <label htmlFor="advanced" className="flex flex-row items-center justify-start gap-3 lg:gap-6 p-4 border-2 rounded-lg peer-checked:border-2 peer-checked:border-purpleBlue group">
                         <div>
                             <img className="py-1 px-[3px] border-lightGray border-2 rounded-md peer-checked:group-[]:bg-purpleBlue" alt="" src="./assets/images/icon-checkmark.svg" />
                         </div>                       
@@ -39,7 +39,7 @@ const AddonsForm = () => {
 
                 <div>
                 <input type="checkbox" name="plan" id="pro" value="customizable" className="sr-only peer"/>
-                <label htmlFor="pro" className="flex flex-row items-center justify-start gap-6 p-4 border-2 rounded-lg peer-checked:border-2 peer-checked:border-purpleBlue group">
+                <label htmlFor="pro" className="flex flex-row items-center justify-start gap-3 lg:gap-6 p-4 border-2 rounded-lg peer-checked:border-2 peer-checked:border-purpleBlue group">
                     <div>
                         <img className="py-1 px-[3px] border-lightGray border-2 rounded-md peer-checked:group-[]:bg-purpleBlue" alt="" src="./assets/images/icon-checkmark.svg" />
                     </div>                       

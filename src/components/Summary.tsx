@@ -2,7 +2,7 @@
 const Summary = () => {
     return (
         <div>
-            <div className="mb-8">
+            <div className="mb-4 lg:mb-8">
                 <h1 className="text-3xl font-bold">Finishing up</h1>
                 <p className="text-coolGray">Double check everything looks OK before confirming.</p>
             </div>
@@ -25,7 +25,7 @@ const Summary = () => {
                 </div>
             </div>
 
-            <div className="flex flex-row items-center justify-between p-6">
+            <div className="flex flex-row items-center justify-between px-6 pt-5 lg:p-6">
                     <p className="text-coolGray">Total (per month)</p>
                     <p className="font-bold text-xl text-purpleBlue">+$12/mo</p>
             </div>
