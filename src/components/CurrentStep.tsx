@@ -1,10 +1,14 @@
-
+import {useAtom} from "jotai";
+import { currentStepAtom } from "../store/jotaiStore";
 
 const CurrentStep = () => {
+
+    const [currentStep] = useAtom(currentStepAtom);
+
     return (
         <>
         <div className="h-11 flex flex-row gap-3">
-            <div className="px-[15px] py-2 border-2 rounded-full bg-lightBlue text-black border-lightBlue">
+            <div className={"px-[15px] py-2 border-2 rounded-full " + `${currentStep==0?"text-black border-lightBlue bg-lightBlue":""}`}>
                 <p>1</p>
             </div>
             <div className="hidden lg:flex lg:flex-col lg:gap-0">
@@ -14,7 +18,7 @@ const CurrentStep = () => {
         </div>
 
         <div className="h-11 flex flex-row gap-3">
-            <div className="px-[15px] py-2 border-2 rounded-full">
+            <div className={"px-[15px] py-2 border-2 rounded-full " + `${currentStep==1?"text-black border-lightBlue bg-lightBlue":""}`}>
                 <p>2</p>
             </div>
             <div className="hidden lg:flex lg:flex-col lg:gap-0">
@@ -24,7 +28,7 @@ const CurrentStep = () => {
         </div>
 
         <div className="h-11 flex flex-row gap-3">
-            <div className="px-[15px] py-2 border-2 rounded-full">
+            <div className={"px-[15px] py-2 border-2 rounded-full " + `${currentStep==2?"text-black border-lightBlue bg-lightBlue":""}`}>
                 <p>3</p>
             </div>
             <div className="hidden lg:flex lg:flex-col lg:gap-0">
@@ -35,7 +39,7 @@ const CurrentStep = () => {
 
 
         <div className="h-11 flex flex-row gap-3">
-            <div className="px-[15px] py-2 border-2 rounded-full">
+            <div className={"px-[15px] py-2 border-2 rounded-full " + `${currentStep==3?"text-black border-lightBlue bg-lightBlue":""}`}>
                 <p>4</p>
             </div>
             <div className="hidden lg:flex lg:flex-col lg:gap-0">
