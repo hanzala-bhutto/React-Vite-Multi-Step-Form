@@ -1,18 +1,20 @@
-import { atom, useAtom } from "jotai";
+import { useAtom } from "jotai";
 import {radiosData} from "../constants";
 import { PlanData } from "../interfaces";
+import { formAtom } from "../store/jotaiStore";
+import { useEffect } from "react";
 
-const planFormAtom = atom({
-    plan: "arcade",
-    billing: 'monthly',
-    charge: 1
-})
+// const planFormAtom = atom({
+//     plan: "arcade",
+//     billing: 'monthly',
+//     charge: 1
+// })
 
 
 
 const PlanForm = () => {
 
-    const [planForm, setPlanForm] = useAtom(planFormAtom);
+    const [planForm, setPlanForm] = useAtom(formAtom);
 
     const radiosLookup : Record<string,PlanData>= {
         arcade: radiosData[0],
@@ -27,9 +29,7 @@ const PlanForm = () => {
 
         const planData = radiosLookup[value];
 
-        setPlanForm({...planForm,plan:planData.plan, charge: planForm.billing==='monthly' ? planData.billing.monthly: planData.billing.yearly})
-
-        console.log(planForm);
+        setPlanForm({...planForm, planForm: planData});
 
     }
 
@@ -40,8 +40,11 @@ const PlanForm = () => {
         else{
             setPlanForm({...planForm,billing:'monthly'})
         }
-        console.log(planForm);
     }
+
+    useEffect(() => {
+        console.log(planForm);
+    },[planForm])
 
     return (
         <div>
@@ -51,7 +54,7 @@ const PlanForm = () => {
             </div>
             <form className="flex flex-col lg:flex-row justify-between gap-4 mb-8">
                 <div>
-                <input onChange={handleSelect} id="arcade" type="radio" name="plan" value={radiosData[0].plan} className="hidden peer" checked={planForm.plan=='arcade'}/>
+                <input onChange={handleSelect} id="arcade" type="radio" name="plan" value={radiosData[0].plan} className="hidden peer" checked={planForm.planForm.plan=='arcade'}/>
                 <label htmlFor="arcade" className="flex flex-row items-start gap-4 lg:flex-col lg:justify-between lg:gap-0 p-3 lg:h-44 lg:w-[140px] border-2 rounded-lg peer-checked:border-2 peer-checked:border-purpleBlue ">
                     <img className="w-10" alt="" src="./assets/images/icon-arcade.svg" />
                     <div className="peer-checked:border-2">
@@ -63,7 +66,7 @@ const PlanForm = () => {
                 </div>
 
                 <div>
-                    <input onChange={handleSelect} type="radio" name="plan" id="advanced" value="advanced" className="hidden peer" checked={planForm.plan=='advanced'}/>
+                    <input onChange={handleSelect} type="radio" name="plan" id="advanced" value="advanced" className="hidden peer" checked={planForm.planForm.plan=='advanced'}/>
                     <label htmlFor="advanced" className="flex flex-row items-start gap-4 lg:flex-col lg:justify-between lg:gap-0 p-3 lg:h-44 lg:w-[140px] border-2 rounded-lg peer-checked:border-2 peer-checked:border-purpleBlue">
                         <img className="w-10" alt="" src="./assets/images/icon-advanced.svg" />
                         <div className="peer-checked:border-2">
@@ -75,7 +78,7 @@ const PlanForm = () => {
                 </div>
 
                 <div>
-                <input onChange={handleSelect} type="radio" name="plan" id="pro" value="pro" className="hidden peer" checked={planForm.plan=='pro'}/>
+                <input onChange={handleSelect} type="radio" name="plan" id="pro" value="pro" className="hidden peer" checked={planForm.planForm.plan=='pro'}/>
                 <label htmlFor="pro" className="flex flex-row items-start gap-4 lg:flex-col lg:justify-between lg:gap-0 p-3 lg:h-44 lg:w-[140px] border-2 rounded-lg peer-checked:border-2 peer-checked:border-purpleBlue">
                     <img className="w-10" alt="" src="./assets/images/icon-pro.svg" />
                     <div className="">
