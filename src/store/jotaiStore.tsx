@@ -5,6 +5,11 @@ const currentStepAtom = atom(0)
 
 const formAtom = atom<FormData>({
     billing: 'monthly',
+    infoForm: {
+      name: '',
+      email: '',
+      phone: '',
+    },
     planForm: {
       plan: 'arcade',
       billing: {
@@ -26,4 +31,17 @@ const formAtom = atom<FormData>({
     return planCost + addonsCost;
   });
 
-export {currentStepAtom, formAtom, totalAtom};
+  const fieldsCompleteAtom = atom((get) => {
+    const $formAtom = get(formAtom);
+    const { name, email, phone } = $formAtom.infoForm;
+
+    if (name === '' || email === '' || phone === '') {
+      return false;
+    }
+    else{
+        return true;
+    }
+
+  })
+
+export {currentStepAtom, formAtom, totalAtom, fieldsCompleteAtom};
