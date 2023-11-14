@@ -39,7 +39,7 @@ const CurrentStep = () => {
 
 
         <div className="h-11 flex flex-row gap-3">
-            <div className={"px-[15px] py-2 border-2 rounded-full " + `${currentStep==3?"text-black border-lightBlue bg-lightBlue":""}`}>
+            <div className={"px-[15px] py-2 border-2 rounded-full " + `${currentStep>=3?"text-black border-lightBlue bg-lightBlue":""}`}>
                 <p>4</p>
             </div>
             <div className="hidden lg:flex lg:flex-col lg:gap-0">

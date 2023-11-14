@@ -56,7 +56,7 @@ function App() {
               {
                 currentStep==3
                 ?
-                <button className=' ml-auto p-2 px-6 rounded-lg bg-marineBlue text-white '>Confirm</button>
+                <button onClick={() => nextStep()} className=' ml-auto p-2 px-6 rounded-lg bg-marineBlue text-white '>Confirm</button>
                 :<button onClick={() => nextStep()} className=' ml-auto p-2 px-6 rounded-lg bg-marineBlue text-white '>Next Step</button>
               }
             </div>
