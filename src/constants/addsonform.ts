@@ -1,0 +1,1 @@
+export const checkboxesData = [{adds_on:'Online service', billing: {monthly:1,yearly:10}},{adds_on:'Larger storage', billing: {monthly:2,yearly:20}},{adds_on:'Customizable profile', billing: {monthly:2,yearly:20}}]
