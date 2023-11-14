@@ -55,7 +55,7 @@ const PlanForm = () => {
             <form className="flex flex-col lg:flex-row justify-between gap-4 mb-8">
                 <div>
                 <input onChange={handleSelect} id="arcade" type="radio" name="plan" value={radiosData[0].plan} className="hidden peer" checked={planForm.planForm.plan=='arcade'}/>
-                <label htmlFor="arcade" className="flex flex-row items-start gap-4 lg:flex-col lg:justify-between lg:gap-0 p-3 lg:h-44 lg:w-[140px] border-2 rounded-lg peer-checked:border-2 peer-checked:border-purpleBlue ">
+                <label htmlFor="arcade" className="flex flex-row items-start gap-4 lg:flex-col lg:justify-between lg:gap-0 p-3 lg:h-44 lg:w-[140px] border-2 rounded-lg peer-checked:border-2 peer-checked:border-purpleBlue peer-hover:border-marineBlue">
                     <img className="w-10" alt="" src="./assets/images/icon-arcade.svg" />
                     <div className="peer-checked:border-2">
                         <h2 className="font-bold text-lg ">Arcade</h2>
@@ -67,7 +67,7 @@ const PlanForm = () => {
 
                 <div>
                     <input onChange={handleSelect} type="radio" name="plan" id="advanced" value="advanced" className="hidden peer" checked={planForm.planForm.plan=='advanced'}/>
-                    <label htmlFor="advanced" className="flex flex-row items-start gap-4 lg:flex-col lg:justify-between lg:gap-0 p-3 lg:h-44 lg:w-[140px] border-2 rounded-lg peer-checked:border-2 peer-checked:border-purpleBlue">
+                    <label htmlFor="advanced" className="flex flex-row items-start gap-4 lg:flex-col lg:justify-between lg:gap-0 p-3 lg:h-44 lg:w-[140px] border-2 rounded-lg peer-checked:border-2 peer-checked:border-purpleBlue peer-hover:border-marineBlue">
                         <img className="w-10" alt="" src="./assets/images/icon-advanced.svg" />
                         <div className="peer-checked:border-2">
                             <h2 className="font-bold text-lg ">Advanced</h2>
@@ -79,7 +79,7 @@ const PlanForm = () => {
 
                 <div>
                 <input onChange={handleSelect} type="radio" name="plan" id="pro" value="pro" className="hidden peer" checked={planForm.planForm.plan=='pro'}/>
-                <label htmlFor="pro" className="flex flex-row items-start gap-4 lg:flex-col lg:justify-between lg:gap-0 p-3 lg:h-44 lg:w-[140px] border-2 rounded-lg peer-checked:border-2 peer-checked:border-purpleBlue">
+                <label htmlFor="pro" className="flex flex-row items-start gap-4 lg:flex-col lg:justify-between lg:gap-0 p-3 lg:h-44 lg:w-[140px] border-2 rounded-lg peer-checked:border-2 peer-checked:border-purpleBlue peer-hover:border-marineBlue">
                     <img className="w-10" alt="" src="./assets/images/icon-pro.svg" />
                     <div className="">
                         <h2 className="font-bold text-lg ">Pro</h2>

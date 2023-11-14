@@ -65,7 +65,7 @@ const AddonsForm = () => {
             <form className="flex flex-col gap-4 mb-4 lg:mb-8">
                 <div>
                     <input onClick={handleSelect} id="arcade" type="checkbox" name="plan" value="online" className="sr-only peer" checked={isChecked('online')} readOnly/>
-                    <label htmlFor="arcade" className="flex flex-row items-center justify-start gap-3 lg:gap-6 p-4 border-2 rounded-lg peer-checked:border-2 peer-checked:border-purpleBlue group">
+                    <label htmlFor="arcade" className="flex flex-row items-center justify-start gap-3 lg:gap-6 p-4 border-2 rounded-lg peer-checked:border-2 peer-checked:border-purpleBlue group peer-hover:border-marineBlue">
                         <div>
                             <img className="py-1 px-[3px] border-lightGray border-2 rounded-md peer-checked:group-[]:bg-purpleBlue" alt="" src="./assets/images/icon-checkmark.svg" />
                         </div>
@@ -84,7 +84,7 @@ const AddonsForm = () => {
 
                 <div>
                     <input onClick={handleSelect} type="checkbox" name="plan" id="advanced" value="larger" className="sr-only peer" checked={isChecked('larger')} readOnly/>
-                    <label htmlFor="advanced" className="flex flex-row items-center justify-start gap-3 lg:gap-6 p-4 border-2 rounded-lg peer-checked:border-2 peer-checked:border-purpleBlue group">
+                    <label htmlFor="advanced" className="flex flex-row items-center justify-start gap-3 lg:gap-6 p-4 border-2 rounded-lg peer-checked:border-2 peer-checked:border-purpleBlue group peer-hover:border-marineBlue">
                         <div>
                             <img className="py-1 px-[3px] border-lightGray border-2 rounded-md peer-checked:group-[]:bg-purpleBlue" alt="" src="./assets/images/icon-checkmark.svg" />
                         </div>                       
@@ -103,7 +103,7 @@ const AddonsForm = () => {
 
                 <div>
                 <input onClick={handleSelect} type="checkbox" name="plan" id="pro" value="customizable" className="sr-only peer" checked={isChecked('customizable')} readOnly/>
-                <label htmlFor="pro" className="flex flex-row items-center justify-start gap-3 lg:gap-6 p-4 border-2 rounded-lg peer-checked:border-2 peer-checked:border-purpleBlue group">
+                <label htmlFor="pro" className="flex flex-row items-center justify-start gap-3 lg:gap-6 p-4 border-2 rounded-lg peer-checked:border-2 peer-checked:border-purpleBlue group peer-hover:border-marineBlue">
                     <div>
                         <img className="py-1 px-[3px] border-lightGray border-2 rounded-md peer-checked:group-[]:bg-purpleBlue" alt="" src="./assets/images/icon-checkmark.svg" />
                     </div>                       

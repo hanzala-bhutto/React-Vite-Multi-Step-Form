@@ -20,7 +20,7 @@ const Summary = () => {
                         <h2 className="font-bold text-lg capitalize">
                             {formData.planForm.plan} {formData.billing==="monthly"?'(Monthly)' :'(Yearly)'}
                         </h2>
-                        <p onClick={() => setCurrentStep(currentStep-2)} className="text-coolGray text-sm underline pointer">Change</p>
+                        <p onClick={() => setCurrentStep(currentStep-2)} className="text-coolGray text-sm underline cursor-pointer hover:text-purpleBlue">Change</p>
                     </div>
                     <p className="font-bold text-lg">+{formData.billing==="monthly"? `${formData.planForm.billing.monthly}/mo`: `${formData.planForm.billing.yearly}/yr`}</p>
                 </div>

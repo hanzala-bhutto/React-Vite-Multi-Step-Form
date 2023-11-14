@@ -7,12 +7,14 @@ import ThankYou from './components/ThankYou'
 import InfoForm from './components/InfoForm'
 import PlanForm from './components/PlanForm'
 import { useAtom } from 'jotai'
-import { currentStepAtom } from './store/jotaiStore'
+import { currentStepAtom, fieldsCompleteAtom } from './store/jotaiStore'
 
 
 function App() {
 
   const [currentStep, setCurrentStep] = useAtom(currentStepAtom);
+  const [fieldsComplete] = useAtom(fieldsCompleteAtom);
+
 
   const components = [
     <InfoForm />,
@@ -52,12 +54,12 @@ function App() {
             <></>
             :
             <div className='fixed bottom-0 right-0 py-6 p-4 bg-white w-full flex flex-row justify-between items-center lg:p-0 lg:static'>
-              {currentStep==0?<></>:<button onClick={() => prevStep()} className='text-coolGray capitalize'>go back</button>}
+              {currentStep==0?<></>:<button onClick={() => prevStep()} className='text-coolGray capitalize font-bold hover:text-marineBlue'>go back</button>}
               {
                 currentStep==3
                 ?
-                <button onClick={() => nextStep()} className=' ml-auto p-2 px-6 rounded-lg bg-marineBlue text-white '>Confirm</button>
-                :<button onClick={() => nextStep()} className=' ml-auto p-2 px-6 rounded-lg bg-marineBlue text-white '>Next Step</button>
+                <button onClick={() => nextStep()} className=' ml-auto p-2 px-6 rounded-lg bg-marineBlue text-white hover:bg-pastelBlue'>Confirm</button>
+                :<button onClick={fieldsComplete?() => nextStep():()=>{}} className=' ml-auto p-2 px-6 rounded-lg bg-marineBlue text-white '>Next Step</button>
               }
             </div>
           }
